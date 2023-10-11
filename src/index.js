@@ -2,6 +2,8 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import './index.css';
+import { ThemeProvider } from "@emotion/react";
+import { theme } from 'constants';
 // const element1= <span key={1}>Hello</span>;
 // const element2 =<span key={2}>World</span>;
 // const element1= React.createElement('span', { a: 5, children: "Hello" });
@@ -22,7 +24,9 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <ThemeProvider theme={theme}>
       <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
 // import React from 'react';
